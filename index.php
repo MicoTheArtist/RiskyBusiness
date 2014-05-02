@@ -8,14 +8,14 @@
 <body>
 	<section class="outsideBoxWrapper">
         <!-- clouds -->
-        <article class="cloud_set_1">
+        <article class="cloud_set_1 cloud1 cloud1Dancing">
             <div class="cloud1"></div>
             <div class="cloud2"></div>
             <div class="cloud3"></div>
             <div class="cloud4"></div>
         </article>
         
-        <article class="cloud_set_2">
+        <article class="cloud_set_2 cloud2 cloud2Dancing">
             <div class="cloud1"></div>
             <div class="cloud2"></div>
             <div class="cloud3"></div>
