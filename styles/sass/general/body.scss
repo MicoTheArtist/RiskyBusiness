@@ -1,0 +1,18 @@
+body {
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
+	align-content:center;
+	margin:0;
+	background-color:$rainbow_orange;
+}
+
+section.outsideBoxWrapper {
+	width:1024px;
+	height:600px;
+	
+	overflow:hidden;
+	margin:10% auto 0 auto;
+	position:relative;
+	background-color:white;
+}

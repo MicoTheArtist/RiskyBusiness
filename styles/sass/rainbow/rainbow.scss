@@ -1,0 +1,91 @@
+article.rainbow_wrapper {
+	position:absolute;
+	z-index:1;
+	left:150px;
+	top:183px;
+	background-color:blue;
+	
+	animation-name:rainbow;
+	animation-delay:4s;
+	animation-duration:1s;
+	animation-fill-mode: both;
+	animation-iteration-count:1;
+	animation-timing-function:ease-in;
+	
+	div.redStrip {
+		position:absolute;
+		z-index:1;
+		top:0px;
+		left:0px;
+		width:757px;
+		height:268px;
+		transform:rotate(3.5deg);
+		background-color:$rainbow_red;
+		border-radius:50%;
+	}
+	div.orangeStrip {
+		position:absolute;
+		z-index:1;
+		top:10px;
+		left:-8px;
+		width:734px;
+		height:273px;
+		transform:rotate(3.5deg);
+		background-color:$rainbow_orange;
+		border-radius:50%;
+	}
+	div.yellowStrip {
+		position:absolute;
+		z-index:1;
+		top:30px;
+		left:-40px;
+		width:734px;
+		height:273px;
+		transform:rotate(3.5deg);
+		background-color:$rainbow_yellow;
+		border-radius:50%;
+	}
+	div.greenStrip {
+		position:absolute;
+		z-index:1;
+		top:45px;
+		left:-70px;
+		width:734px;
+		height:273px;
+		transform:rotate(4deg);
+		background-color:$rainbow_green;
+		border-radius:50%;
+	}
+	div.blueStrip {
+		position:absolute;
+		z-index:1;
+		top:67px;
+		left:-110px;
+		width:734px;
+		height:273px;
+		transform:rotate(4deg);
+		background-color:$rainbow_blue;
+		border-radius:50%;
+	}
+	div.whiteStrip {
+		position:absolute;
+		z-index:1;
+		top:90px;
+		left:-170px;
+		width:734px;
+		height:273px;
+		transform:rotate(4deg);
+		background-color:$rainbow_white;
+		border-radius:50%;
+	}
+}
+
+
+	@keyframes rainbow {
+		/*
+		from {transform:translateX(-1000px);}		
+		to {transform:translateX(150px);}
+		*/
+		from { opacity:0; }
+		to { opacity:1; }
+	}
