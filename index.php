@@ -69,13 +69,19 @@
                 <div class="message">
                     <!-- Text goes inside here -->
                 </div>
-            </article>           
+            </article>  
+            
+            <!-- Credits -->
+            <article class="theEnd">
+                <div class="Credits ">The End</div>
+			</article>
         </section>
         
         <!-- buttons -->
-        <div class="start" style="display:none" >Start</div>
-        <div class="stop" style="display:none" >Stop</div>
-        <div class="fullScreen" style="display:none" >Full Screen</div>
+        <div class="start hide" >Start</div>
+        <div class="stop hide" >Stop</div>
+        <div class="fullScreen hide" >Full Screen</div>
+        
             
         <!-- Music -->
         <audio src="music/oldTimeRockAndRoll.mp3" autoplay></audio>

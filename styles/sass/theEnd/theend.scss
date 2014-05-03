@@ -1,0 +1,28 @@
+	article.theEnd {
+		position:relative;
+		z-index:500;
+		display:flex;
+		flex-direction:row;
+		flex-wrap:wrap;
+		align-content:center;
+		align-items:center;
+		justify-content:center;
+		background-color:$rainbow_white;
+		
+		animation:theEnd 15s 45s 1 ease-in both;
+		
+		div.Credits {
+			font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+			font-size:4rem;
+			color:black;
+			
+		} /* div.Credits */
+		
+	} /* article.theEnd */
+
+
+	@keyframes theEnd {
+		0% { opacity:0; }
+		80% { opacity:1; }
+		100% { opacity:.0; }
+	}
