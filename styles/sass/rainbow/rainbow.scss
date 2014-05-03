@@ -1,91 +1,142 @@
-article.rainbow_wrapper {
-	position:absolute;
-	z-index:1;
-	left:150px;
-	top:183px;
-	background-color:blue;
-	
-	animation-name:rainbow;
-	animation-delay:4s;
-	animation-duration:1s;
-	animation-fill-mode: both;
-	animation-iteration-count:1;
-	animation-timing-function:ease-in;
-	
-	div.redStrip {
+	article.rainbow_wrapper {
 		position:absolute;
 		z-index:1;
-		top:0px;
-		left:0px;
-		width:757px;
-		height:268px;
-		transform:rotate(3.5deg);
-		background-color:$rainbow_red;
-		border-radius:50%;
-	}
-	div.orangeStrip {
-		position:absolute;
-		z-index:1;
-		top:10px;
-		left:-8px;
-		width:734px;
-		height:273px;
-		transform:rotate(3.5deg);
-		background-color:$rainbow_orange;
-		border-radius:50%;
-	}
-	div.yellowStrip {
-		position:absolute;
-		z-index:1;
-		top:30px;
-		left:-40px;
-		width:734px;
-		height:273px;
-		transform:rotate(3.5deg);
-		background-color:$rainbow_yellow;
-		border-radius:50%;
-	}
-	div.greenStrip {
-		position:absolute;
-		z-index:1;
-		top:45px;
-		left:-70px;
-		width:734px;
-		height:273px;
-		transform:rotate(4deg);
-		background-color:$rainbow_green;
-		border-radius:50%;
-	}
-	div.blueStrip {
-		position:absolute;
-		z-index:1;
-		top:67px;
-		left:-110px;
-		width:734px;
-		height:273px;
-		transform:rotate(4deg);
-		background-color:$rainbow_blue;
-		border-radius:50%;
-	}
-	div.whiteStrip {
-		position:absolute;
-		z-index:1;
-		top:90px;
-		left:-170px;
-		width:734px;
-		height:273px;
-		transform:rotate(4deg);
-		background-color:$rainbow_white;
-		border-radius:50%;
-	}
-}
+		left:150px;
+		top:183px;
+		background-color:blue;
+		/*
+		animation-name:rainbow;
+		animation-duration:1s;
+		animation-delay:4s;
+		animation-duration:1s;
+		animation-fill-mode: both;
+		animation-timing-function:ease-in;
+		*/
+		animation:
+			rainbow 1s 4s 1 ease-in both,
+			rainbowDance 1s 27s 10 ease-in both;
+			/*
+			rainbowDance 1s 0s infinite ease-in both,
+			rainbowSpinLeft 1s 0s 2 ease-in both,
+			rainbowDance 1s 0s infinite ease-in both;
+			*/
+			/* rainbowSpinRight 1s 20s 1 ease-in both; */
+		
+		div.redStrip {
+			position:absolute;
+			z-index:1;
+			top:0px;
+			left:0px;
+			width:757px;
+			height:268px;
+			transform:rotate(3.5deg);
+			background-color:$rainbow_red;
+			border-radius:50%;
+			
+			animation: rainbowSpinRight 1s 20s 1 ease-in both;
+		}
+		
+		div.orangeStrip {
+			position:absolute;
+			z-index:1;
+			top:10px;
+			left:-8px;
+			width:734px;
+			height:273px;
+			transform:rotate(3.5deg);
+			background-color:$rainbow_orange;
+			border-radius:50%;
+			
+			animation: rainbowSpinRight 1s 21s 1 ease-in both;
+		}
+		div.yellowStrip {
+			position:absolute;
+			z-index:1;
+			top:30px;
+			left:-40px;
+			width:734px;
+			height:273px;
+			transform:rotate(3.5deg);
+			background-color:$rainbow_yellow;
+			border-radius:50%;
 
+			animation: rainbowSpinRight 1s 22s 1 ease-in both;
+
+		}
+		div.greenStrip {
+			position:absolute;
+			z-index:1;
+			top:45px;
+			left:-70px;
+			width:734px;
+			height:273px;
+			transform:rotate(4deg);
+			background-color:$rainbow_green;
+			border-radius:50%;
+			
+			animation: rainbowSpinRight 1s 23s 1 ease-in both;
+		}
+		div.blueStrip {
+			position:absolute;
+			z-index:1;
+			top:67px;
+			left:-110px;
+			width:734px;
+			height:273px;
+			transform:rotate(4deg);
+			background-color:$rainbow_blue;
+			border-radius:50%;
+			
+			animation: rainbowSpinRight 1s 24s 1 ease-in both;
+		}
+		div.whiteStrip {
+			position:absolute;
+			z-index:1;
+			top:90px;
+			left:-170px;
+			width:734px;
+			height:273px;
+			transform:rotate(4deg);
+			background-color:$rainbow_white;
+			border-radius:50%;
+		}
+	} /* article.rainbow_wrapper */
+	
+	/* rainbow class colors that can change */
+	article.rainbow_wrapper div.redBack { background-color:$rainbow_red; } 		/* redBack */
+	article.rainbow_wrapper div.orangeBack { background-color:$rainbow_orange; } 	/* orangeBack */
+	article.rainbow_wrapper div.yellowBack { background-color:$rainbow_yellow; } 	/* yellowBack */
+	article.rainbow_wrapper div.greenBack { background-color:$rainbow_green; }  	/* greenBack */
+	article.rainbow_wrapper div.blueBack { background-color:$rainbow_blue; }  		/* blueBack */
+	article.rainbow_wrapper div.whiteBack { background-color:$rainbow_white; }  	/* whiteBack */
+	
+	/* rainbow id colors that can change */
+	#redBack { background-color:$rainbow_red; } 			/* redBack */
+	#orangeBack { background-color:$rainbow_orange; } 	/* orangeBack */
+	#yellowBack { background-color:$rainbow_yellow; } 	/* yellowBack */
+	#greenBack { background-color:$rainbow_green; }  	/* greenBack */
+	#blueBack { background-color:$rainbow_blue; }  		/* blueBack */
+	#whiteBack { background-color:$rainbow_white; }  	/* whiteBack */
 
 	@keyframes rainbow {
-		/*
-		from {transform:translateX(-1000px);}		
-		to {transform:translateX(150px);}
-		*/
 		from { opacity:0; }
 		to { opacity:1; }
+	}
+	
+	@keyframes rainbowSpinRight {
+		from { transform:rotate(0deg); }
+		to { transform:rotate(360deg); }
+	}
+	
+	@keyframes rainbowDance {
+	  0% { transform:translatey(0);}
+	  25% { transform:translatey(5px);}
+	  50% { transform:translatey(0px);}
+	  75% { transform:translatey(-5px); transform:rotate(5deg);}
+	  100% { transform:translatey(0px); transform:rotate(0deg);}
+	}
+	
+	@keyframes rainbowSpinLeft {
+		from { transform:rotate(0deg); transform-origin:50% 50%; }
+		to { transform:rotate(-360deg); transform-origin:50% 50%; }
 	}
